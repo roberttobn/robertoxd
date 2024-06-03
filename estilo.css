@@ -1,0 +1,232 @@
+:root{
+    --red:rgb(240,70,40);
+    --black:#040405;
+    --blue:#08d9d6;
+    --white:#eaeaea;
+    --title:35px;
+    --tex:19px;
+}
+*{
+ margin:0;
+ padding: 0;
+ box-sizing: border-box;
+}
+body{
+    background: #fff;
+    overflow-x: hidden;
+    font-family: sans-serif,'Red Hat Tex';
+}
+/*encabezado*/
+#header{
+    position: relative;
+    width: 100%;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: 	#000080;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;  
+}
+.menu .logo-box{margin-left: 20px;}
+.menu .logo-box h1 a{
+    text-decoration: none;
+    font-size:var(--title);
+    font-weight: 400;
+    color: var(--black);
+}
+.menu .list-container{margin-right: 20px;}
+.menu .list-container ul{display: flex;}
+.menu .list-container ul li{list-style: none;}
+.menu .list-container ul li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 8px;
+    color: var(--black);
+    border-radius: 24px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+.menu .list-container ul li a.active{
+    background: var(--red);
+    color: #fff;
+}
+.menu .list-container ul li a:hover{
+    background: var(--red);
+    color: #fff;
+}
+/*img encabezado*/
+.img-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../7mayo/img/barca.jpg);
+    background-attachment: fixed;
+    background-position:center;
+    background-size: cover;
+}
+.img-header  .welcome{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-header  .welcom{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 200;
+}
+.img-header  .welcome hr{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;
+}
+.img-header  .welcome p{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
+.img-hader  .welcome> button{
+   width: 170 px;
+   height: 40px;
+   background: var(--red);
+   border-radius: 50px;
+   border: none;
+   outline: none;
+   font-size: 22px;
+   color: red;
+   text-align: center;
+   margin-top: 20px;
+   cursor: pointer;
+   transition: 0.5s;
+}
+.img-header  .welcom>button:hover{
+    background: var(--blue);
+}
+/*estilo mobil o tablet*/
+
+/*acerca de nosotros*/
+.acerca-de{
+    width: 100%;
+    margin-top: 120px;
+}
+.acerca-de  .info-container{
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+}
+.acerca-de .info-container h1{
+    font-size: 50px;
+    font-weight: 400;
+    color: #040405;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.acerca-de .info-container p{
+    text-align: center;
+    font-size: 17px;
+    color: var(--black);
+    line-height: 35px;
+    margin: 10px 0px;
+}
+.acerca-de .info-container .about-gallery img{
+    width: calc(33.333%-10px);
+    height: 300px;
+    margin: 10px 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.acerca-de .info-container .about-gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+}
+.acerca-de  .info-container .about-more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.acerca-de  .info-container .about-more button{
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    background: var(--red);
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.acerca-de  .info-container .about-more button:hover{
+    background: var(--blue);
+}
+/* configuracion del estilo para tablet o mobila*/
+
+/* nuestros proyectos*/
+.our-projects{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../7mayo/img/barca23.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+}
+.our-projects .deg-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0.8);
+}
+.our-projects  .ejezprojects{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.our-projects  .container-projects{
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+}
+.our-projects  .container-projects .projects-img{
+    width: 100%;
+    height: 200%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+.our-projects  .container-projects .projects-img  img{
+    width: calc(30% -10%);
+    height: 200px;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
